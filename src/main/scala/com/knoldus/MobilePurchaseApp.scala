@@ -1,3 +1,4 @@
+package com.knoldus
 
 import akka.actor._
 import akka.pattern.ask
@@ -37,7 +38,6 @@ class ValidationActor(ref: ActorRef) extends Actor with ActorLogging {
         log.info("\nYour Galaxy S8 Costs Rs 62000 ..!!! Please Pay the Amount.!! \n ____Forwarding To PaymentGateway_____ ")
         availableItems -= itemsRequested
         log.info(s"\nRemaining Items $availableItems")
-        //        val purchaseGateway = context.actorOf(BalancingPool(5).props(Props[PurchaseActor]))
         ref forward (customer)
       }
       else {

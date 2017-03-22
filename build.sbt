@@ -16,3 +16,5 @@ libraryDependencies ++= Seq(
 
 
 )
+
+coverageExcludedPackages := "com\\.knoldus\\.MobilePurchaseApp.*"
